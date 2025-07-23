@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>📊 Google Sheet to JSON</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f7f7f7; }
+    button, select { font-size: 1rem; padding: 0.5rem; margin: 0.5rem 0.5rem 0.5rem 0; }
+    pre { background: white; padding: 1rem; border: 1px solid #ccc; max-height: 500px; overflow: auto; }
+    .loading { color: gray; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>📂 데이터 시트 확인</h1>
+  <div id="status" class="loading">데이터 불러오는 중...</div>
+  <select id="sheetSelect" disabled></select>
+
+  <br>
+  <button id="saveBtn" disabled>💾 데이터 저장</button>
+
+  <h2>🧾 결과 미리보기</h2>
+  <pre id="resultArea">[데이터 미리보기 영역]</pre>
+
+  <script>
+    let fullData = {};
+
+    async function initSheets() {
+      try {
+        const res = await fetch("/sheets"); // 시트 이름 요청
+        const names = await res.json();
+
+        const select = document.getElementById("sheetSelect");
+        const status = document.getElementById("status");
+
+        names.forEach(name => {
+          const opt = document.createElement("option");
+          opt.value = name;
+          opt.textContent = name;
+          select.appendChild(opt);
+        });
+
+        status.textContent = "✅ 시트 로딩 완료";
+        select.disabled = false;
+        document.getElementById("saveBtn").disabled = false;
+
+      } catch (err) {
+        document.getElementById("status").textContent = "❌ 로딩 실패";
+        console.error("시트 로딩 오류:", err);
+      }
+    }
+
+    document.getElementById("saveBtn").addEventListener("click", async () => {
+      const sheet = document.getElementById("sheetSelect").value;
+      const resultArea = document.getElementById("resultArea");
+
+      resultArea.textContent = "📡 저장 중...";
+      try {
+        const res = await fetch(`/sheets/${sheet}`);
+        const data = await res.json();
+
+        const preview = data.slice(0, 10); // 최대 10개
+        resultArea.textContent =
+          `✅ 저장 완료 (${data.length}개 항목)\n\n` +
+          JSON.stringify(preview, null, 2);
+
+      } catch (err) {
+        resultArea.textContent = "❌ 저장 중 오류 발생";
+        console.error("저장 오류:", err);
+      }
+    });
+
+    initSheets(); // 최초 실행
+  </script>
+
+</body>
+</html>

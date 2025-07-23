@@ -1,0 +1,150 @@
+[
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 2,
+    "email": "bob@ex.com",
+    "username": "bob"
+  },
+  {
+    "roles": ["editor"],
+    "active": true,
+    "id": 3,
+    "email": "carol@ex.com",
+    "username": "carol"
+  },
+  {
+    "roles": ["user"],
+    "active": true,
+    "id": 4,
+    "email": "dan@ex.com",
+    "username": "dan"
+  },
+  {
+    "roles": [
+      "user",
+      "editor"
+    ],
+    "active": true,
+    "id": 5,
+    "email": "eva@ex.com",
+    "username": "eva"
+  },
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 6,
+    "email": "frank@ex.com",
+    "username": "frank"
+  },
+  {
+    "roles": ["admin"],
+    "active": true,
+    "id": 7,
+    "email": "grace@ex.com",
+    "username": "grace"
+  },
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 8,
+    "email": "hank@ex.com",
+    "username": "hank"
+  },
+  {
+    "roles": ["editor"],
+    "active": true,
+    "id": 9,
+    "email": "ivy@ex.com",
+    "username": "ivy"
+  },
+  {
+    "roles": ["user"],
+    "active": true,
+    "id": 10,
+    "email": "jack@ex.com",
+    "username": "jack"
+  },
+  {
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "active": true,
+    "id": 11,
+    "email": "kate@ex.com",
+    "username": "kate"
+  },
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 12,
+    "email": "leo@ex.com",
+    "username": "leo"
+  },
+  {
+    "roles": ["user"],
+    "active": true,
+    "id": 13,
+    "email": "mia@ex.com",
+    "username": "mia"
+  },
+  {
+    "roles": [
+      "editor",
+      "user"
+    ],
+    "active": true,
+    "id": 14,
+    "email": "nick@ex.com",
+    "username": "nick"
+  },
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 15,
+    "email": "olivia@ex.com",
+    "username": "olivia"
+  },
+  {
+    "roles": ["admin"],
+    "active": true,
+    "id": 16,
+    "email": "paul@ex.com",
+    "username": "paul"
+  },
+  {
+    "roles": [
+      "editor",
+      "user"
+    ],
+    "active": true,
+    "id": 17,
+    "email": "quinn@ex.com",
+    "username": "quinn"
+  },
+  {
+    "roles": ["user"],
+    "active": true,
+    "id": 18,
+    "email": "rose@ex.com",
+    "username": "rose"
+  },
+  {
+    "roles": ["user"],
+    "active": false,
+    "id": 19,
+    "email": "sam@ex.com",
+    "username": "sam"
+  },
+  {
+    "roles": [
+      "user",
+      "editor"
+    ],
+    "active": true,
+    "id": 20,
+    "email": "tina@ex.com",
+    "username": "tina"
+  }
+]
