@@ -1,0 +1,52 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+/build/
+/target/
+/out/
+/bin/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+/*.iml
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Env & Config
+.env
+*.env
+*.yml
+application-*.yml
+application-*.properties
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Test & Report
+/test-output/
+/coverage/
+
+# Cache & Temp
+*.swp
+*.swo
+*.bak
+
+# Optional: Generated JSON
+src/main/resources/json/
