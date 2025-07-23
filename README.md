@@ -27,7 +27,7 @@ Google Spreadsheet 데이터를 Java로 불러와 JSON 파일로 저장하는 �
 > ✅ 시트 로딩 완료 → 시트 선택 → JSON 저장 및 클래스 생성  
 > ✅ JSON 저장 결과 및 미리보기 화면 출력
 
-![시트 데이터 미리보기](./resources/static/data/screenshots/sheet-preview.png)
+![시트 데이터 미리보기](backend/app/src/main/resources/static/data/screenshots/sheet-preview.png)
 
 ---
 ## 📚 사용 기술
